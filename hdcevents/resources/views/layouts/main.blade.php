@@ -22,7 +22,7 @@
             <nav class="navbar navbar-expand-lg navbar-light">
                 <div class="collapse navbar-collapse" id="navbar">
                     <a href="" class="navbar-brand">
-                        <img src="/img/sol.png" alt="">
+                        <img src="/img/hdcevents_logo.svg" alt="">
                     </a>
                     <ul class="navbar-nav">
                         <li class="nav-item">
@@ -41,9 +41,18 @@
                 </div>
             </nav>
         </header>
-        @yield('content')
+        <main>
+            <div class="container-fluid">
+                <div class="row">
+                    @if(session('msg'))
+                        <p class="msg">{{ session('msg') }}</p>
+                    @endif
+                    @yield('content')
+                </div>
+            </div>
+        </main>
         <footer>
-            <p>HDC Events &cops; 2020</p>
+            <p>HDC Events &copy; 2020</p>
         </footer>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
