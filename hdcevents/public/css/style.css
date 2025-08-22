@@ -177,6 +177,10 @@ header {
     display: flex;
 }
 
+#description-container {
+    margin-top: 30px;
+}
+
 #info-container h3,
 #description-container h3 {
     font-size: 20px;
@@ -200,6 +204,24 @@ header {
 
 #items-list li {
     display: flex;
+}
+
+/* Dashboard */
+.title {
+    margin-top: 30px !important;
+}
+
+.dashboard-title-container {
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.dashboards-events-container th {
+    width: 25%;
+}
+
+.dashboards-events-container form {
+    display: inline-block;
 }
 
 /* footer */

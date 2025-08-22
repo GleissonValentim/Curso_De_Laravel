@@ -9,4 +9,11 @@ class Event extends Model
     protected $casts = [
         'items' => 'array'
     ];
+
+    protected $dates = ['date'];
+
+    // Pertence a um usuario
+    public function user() {
+        return $this->belongsTo('App\Models\User');
+    }
 }
