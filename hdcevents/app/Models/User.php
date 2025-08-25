@@ -52,7 +52,7 @@ class User extends Authenticatable
         'profile_photo_url',
     ];
 
-    // Muitos eventos atrelando ao evento
+    // Muitos eventos atrelando ao usuario
     public function events() {
         return $this->hasMany('App\Models\Event');
     }
@@ -68,5 +68,10 @@ class User extends Authenticatable
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
         ];
+    }
+
+    // Pertence a muitos
+    public function eventsAsPaticipant() {
+        return $this->belongsToMany('App\Models\Event');
     }
 }
